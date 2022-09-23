@@ -1,0 +1,96 @@
+:root{
+    --border-radius: 5px;
+    
+    /*Colors*/
+    --background-color: #1B244A;  
+    --team-color: #EEEEEE; 
+    --scoreboard-number-color: #F94F6D;   
+    --scoreboard-number-background-color: #080001;                    
+    --button-color: #9AABD8;                        
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-color);
+    font-family: Cursed Timer;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.team-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
+
+.team{
+    color: var(--team-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    margin: 0;
+}
+
+.score-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--scoreboard-number-background-color);
+    border-radius: var(--border-radius);
+    height: 120px;
+    width: 200px; 
+    margin: 26px 100px;
+    /*I have changed the width of black background of where the score sits in order to compensate 
+    for triple digits as basketball games are known to get to a little over 100 points from time to time*/
+}
+
+.score-number{
+    color: var(--scoreboard-number-color);
+    font-size: 90px;
+    transform: translateY(7px) 
+    /*There is a strange issue with a space appearing underneath the score number throwing the number off center on the vertical axis. 
+    I tried adjusting the line height and margin but this did nothing. I opted to use the transform: translateY(7px). I did some googling and the solution I found was not so easy to follow. 
+    You'll see the same issue occurs with the point button numbers and reset button text as well.*/
+}
+
+.btn-container{
+    display: flex;
+    justify-content: space-between;
+    width: 155px;
+}
+
+.btn-style{
+    background: none;
+    border: 2px solid var(--button-color);
+    border-radius: var(--border-radius);
+    color: var(--button-color);
+    text-align: center;
+    font-family: inherit;
+    font-size: 18px;
+}
+
+.point-btn{
+    height: 45px;
+    width: 45px;
+}
+
+.reset-btn{ /*Added a reset button as part of one of the stretch goals.*/
+    margin-top: 30px;
+    padding: 10px;
+}
+
+@font-face {
+  font-family: Cursed Timer;
+  src: url(CursedTimerUlil-Aznm.ttf);
+}
+
